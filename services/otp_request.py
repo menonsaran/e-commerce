@@ -15,7 +15,7 @@ def otp_request(credentials, db):
                detail="Invalid Credentials"
                )
      otp = get_otp()
-     # send_otp(credentials.email, otp)
+     send_otp(credentials.email, otp)
      user.otp = otp
      user.otp_time = time()
      db.commit()
